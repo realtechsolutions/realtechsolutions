@@ -1,78 +1,144 @@
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtech Solutions</title>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<head>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <link  href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+<style>
+.menu{display: none;}
+ @media screen and (min-width: 800px) { .hamberger {display: none;} }
+ @media screen and (max-width: 700px) { .desktop {display: none;} }
+ a{font-size: 1.5rem;margin-left: 13px;}
+</style>
+
+</head>
 <body>
-<div class="row">
-   
-
-    <div class="logo col-xs-4"> 
+  <div class="navbar"  style="background-color: #f2f2f2; height:9vh ; padding: 1vh;" >
+    <div class="logo"  style="display: flex;align-items: center; justify-content: flex-start;"  > <img src="logo realtech.png" alt="logo" height="35px" width="35px" 
+      style="border-radius: 5px; "  >
+<a href="">   <span style=" position: relative;  font-size: 25px ;">
+     Realtech Solutions</span> </a> </div>
     
+     <div class="desktop" style="font-size: 20px; position: relative;bottom: 4vh;left: 65vw;" >
+   <a href="#about"> About</a> <a href="#products"> Products and Services</a> <a href="#Contact"> Contact</a> </div>
+  <div>
+  <a href="#" class="hamberger" onclick="toggle()" style="font-size: 30px;
+  position:relative;  left: 80vw; bottom: 5vh ">   &#9776;  </a> </div>
     
-     <svg  height="60px" width="60px"> <circle cx="25px"cy= '25px' r='10px' fill="blue"> </circle> </svg>  </div>
-     
-     <div class= "col-xs-4">
-     
-      <h3>DigiPulp </h3> </div>
-     
-      <div  class=" col-xs-4 menu" onclick="show()" > 
-       <div class="bar"></div>
-      
-    <div class="bar"></div>
-    <div class= "bar"></div> </div>
-   
-    </div>
-    
-    
-   
-  
-    
-    <div class='submenu' id= "sub"> <a href='#about' target="_blank"> About</a> <a href= '#contact'>Contact</a>
-  <a href='#services'> Services</a>  </div>   
-  
-  
-  <img height="50px" width="100vw"
-  src ="SAVE_20200602_153255.jpg">
-   
-  
-  <div class="headings">
-  
-  
-  
-  <h3> Grow your business</h3> <h3> Go Digital!</h3>  
-  
-  <h4> Digital solutions for businesses and industries.</h4>
   </div>
-  <p> In present times of fast growing internet and its easy access to masses, internet maketing and online branding are necessary for any business  or enterprise to succeed. We can help you to have a strong online presence by 
-  building a fast and responsive web site, by search engine optimization and by search engine marketing.
-  </p>
-     
-     
-     <div name="about" id="about" > <strong> About us</strong> <br /> We are a web development and digital marketing agency engaged in the business of web developmment and internet marketing </div>
-     
-     
-     <div id="contact"> <strong> Contact us</strong>  <br /> Mobile:7520671785.<br /> email: digisilk@gmail.com <br />
-     Address: Vishal Vihar Saharanpur U.P 247001</div>
-     
-     <div id="services">
-     <h4> Services</h4>
-     <ul> <li> Web-development</li> <li> Mobile development</li> <li> Digital Marketing</li> </ul>
-         
-     </div>
-     
-     <div class="row">
+  <ul class="menu" id="menu" style="width: 100vw; background:#f2f2f2 ; margin-top: 0; ">
+     <li> <a href="#about"> About </a></li>  <li> <a href="#products">Products and services</li>
+       <li> <a href="#contacts">Contact </a></li> </ul>
+   
+    <div class="container">
+      
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="background.jpg" style="opacity: 0.3;" >
+              <span class="card-title" style="color: blue; font-weight: bold;">Digital solutions for business,education and industries.</span>
+            </div>
+            
+                         
+            
+          
+        </div>
+      </div>
+       
 
-     
-     <div class="col-xs-4"> f1</div>
-     <div class="col-xs-4"> g3</div>
-     <div class="col-xs-4"> f3</div>
-     
-     </div>
-     </div>
-     
+  
+  
+  
+  <p class="flow-text" id="about"> In present times of fast growing internet and its easy access to masses, internet based technologies
+    are being increasingly used to solve many problems of  business,education and industries.
+    Use of these internet based technologies are necessary for any business  or enterprise to succeed. 
+         </p>
+    <h5> Who we are</h5> <hr>   
+     <p class="flow-text">We are involved in the business of  application of internet based technologies in business,education 
+       and industries </p>
+     <h5> What we do</h5> <hr>
+    <p class="flow-text">We are involved in following activities.
+      <ul style="font-size: large;"> <li>Web-development</li> <li>Mobile development</li>  <li> Digital Marketing</li>  </ul> </p>
     
-     </div>
+    <h5> Why choose us</h5> <hr>
+    <p class="flow-text"> We offer  world class products and services at the most economical rate and believe
+      that benefits of this digital revolution must reach everybody. </p>
+        
+     <h5 id="products"> Our Products and Customers</h5> <hr>
+  <div style="display: flex;  align-items: center; ">  
+<img src="paperlogo.png" height="35px" width="35px" alt="logo"> <span style="font-size: 25px; margin-top: 0;">
+    PaperCalc </span>  </div> <div style="position: relative; left: 70%; bottom: 40;"> <i class="material-icons" style="font-size: 45px;">android</i>  </div>
+<div style="font-size: large;margin-top: 10px;"> Shribalaji Agro Products  www.shribalajiagroproducts.com  
+</div><div style="font-size: large;margin-top: 10px;">  Manushree Chemicals   www.manushreechemicals.in</div>
+  <div id="contacts"> <h5> Contact us</h5>  <hr> <p class="flow-text">  Please  feel free  to contact us regarding any query. <br> </br>
+     <i class="material-icons">phone</i> 7520671785<br />
+    <i class="material-icons">email</i> realtechsolns@gmail.com <br />
+    <i class="material-icons">location_city</i> Vishal Vihar Saharanpur U.P 247001 </p></div> <hr>
+
+<form action="https://formspree.io/f/mqkgwlll" method="POST">
+  <div class="row">
+    <div class="input-field col s6">
+      <input  placeholder="Enter Name" id="name" type="text" class="validate" name="name">
+      <label class="active" for="name"> Name</label>
+    </div>
+  </div>
+   
+  <div class="row">
+    <div class="input-field col s6">
+      <input  placeholder="Enter Email" id="email" type="text" class="validate" name="Email">
+      <label class="active" for="name"> Email</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <input  placeholder="Enter contact number" id="phone" type="text" class="validate" name="Phone">
+      <label class="active" for="phone"> Contact Number</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <label class="active" for="name"> Write something...</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <button class="btn" type="submit" > Send</button>
+      <label class="active" for="phone"></label>
+    </div>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+</form>
+
+       
+    </div>       
+  <div class="footer" style="background: #ee6e73;padding: 5px; display: flex;align-items: center;"> 
+     <i class="material-icons small" style="font-size: 17px;"  > 
+    copyright</i> <span > 2021   Realtech Solutions </span>  </div>         
      
-    </body>
+ <script> 
+function toggle() { document.getElementById("menu").classList.toggle("menu")
+  
+}
+</script>
+<script> function hide() {document.getElementById("mobile-demo").style.display = "none"  }
+function show() {document.getElementById("menu").style.display= "block"} </script>
+</body>
 </html>
 
