@@ -1,193 +1,253 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web development,Mobile development,Digital Marketing"/>
+
   <title>Realtech Solutions</title>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style> .sidenav {margin-top: 8.4vh;}  </style>
   <link rel=" shortcut icon" type="image/png" href="favicon.png">
-
-
-
-  <style>
-    .menu {
-      display: none;
-    }
-
-    @media screen and (min-width: 800px) {
-      .hamberger {
-        display: none;
-      }
-    }
-
-    @media screen and (max-width: 700px) {
-      .desktop {
-        display: none;
-      }
-    }
-
-    a {
-      font-size: 1.5rem;
-      margin-left: 13px;
-    }
-  </style>
-
 </head>
 
 <body>
-  <div class="navbar" style="background-color: #f2f2f2; height:9vh ; padding: 1vh;">
-    <div class="logo" style="display: flex;align-items: center; justify-content: flex-start;"> <img
-        src="logo realtech.png" alt="logo" height="35px" width="35px" style="border-radius: 5px; ">
-      <a href=""> <span style=" position: relative;  font-size: 25px ;">
-          Realtech Solutions</span> </a>
-    </div>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container ">
+      <a id="logo-container" href="#" class="brand-logo"> <img src="logo realtech.png"
+         alt=" logo image" height="45px"
+          width="45px" style="margin-top: 0.8vh;"> </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Products and Services</a></li>
+        <li><a href="#contact">contact</a></li>
 
-    <div class="desktop" style="font-size: 20px; position: relative;bottom: 4vh;left: 65vw;">
-      <a href="#about"> About</a> <a href="#products"> Products and Services</a> <a href="#Contact"> Contact</a>
-    </div>
-    <div>
-      <a href="#" class="hamberger" onclick="toggle()" style="font-size: 30px;
-  position:relative;  left: 80vw; bottom: 6vh "> &#9776; </a>
-    </div>
+      </ul>
 
+      <ul id="nav-mobile" class="sidenav  sidenav-close">
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Products and Services</a></li>
+        <li><a href="#contact">contact</a></li>
+
+
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h2 class="header center  white-text text-lighten-5">Realtech Solutions</h2>
+        <div class="row center">
+          <h5 class="header col s12 text-lighten-5   ">Digital Solutions for business,education and industries.</h5>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img
+        src="https://images.unsplash.com/photo-1614853036483-3ff5bd3e5714?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjM3fHxhcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+        alt="background">
+    </div>
   </div>
-  <ul class="menu" id="menu" style="width: 100vw; background:#f2f2f2 ; margin-top: 0; ">
-    <li> <a href="#about"> About</a></li>
-    <li> <a href="#products"> Products and Services</a></li>
-    <li> <a href="#contacts"> Contacts</a></li>
 
 
-  </ul>
   <div class="container">
+    <div class="section">
 
-    <div class="row">
-      <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">Digital solutions for business,education and industries</span>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center hide  ">Speeds up development</h5>
+
+            <p  id="about" class="light flow-text">In present times of fast growing internet and its easy access to masses,internet
+              based
+              technologies are being increasingly used to solve many problems of business,education and industries.
+              Use of these internet based technologies has become necessary for any business or enterprise to succeed.
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Who we are</h5>
+
+            <p class="light flow-text">We are involved in the business of application of internet based technologies in
+              business,education
+              and industries.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">What we do</h5>
+
+            <p class="light flow-text "> We  create beautiful and amazing software applications for 
+               business,education and industries. We are involved in following activities.
+            <ul style="font-size: large;">
+              <li>Web-development</li>
+              <li>Mobile development</li>
+              <li> Digital Marketing</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center   ">Why choose us</h5>
+
+            <p class="light flow-text">We offer world class products and services at the most economical rate and
+              believe
+              that benefits of this digital revolution must reach everybody. We can help you in developing
+              a strong online presence with almost negligible expenses.
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center" id="product">Our Products and Customers</h5>
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <img src="paperlogo.png" alt="PaperCalc logo" class="circle">
+                <span class="title">PaperCalc</span>
+                
+                <a href="#!" class="secondary-content"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="image" 
+                  width="100px" height="40px" ></a>
+              </li>
+              <li class="collection-item avatar">
+                <img src="calcall.png" alt="CalcAll logo" class="circle">
+                <span class="title">CalcAll</span>
+                
+                <a href="#!" class="secondary-content"> <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                   alt="image" width="100px" height="40px">  </a>
+              </li>
+              <li class="collection-item"><a href="http://shribalajiagroproducts.com"> Shri Balaji Agro Products </a></li>
+              <li class="collection-item"><a href="http://manushreechemicals.in"> Manushree Chemicals </a></li>
+
+            </ul>
+
 
           </div>
-
         </div>
+
+
+        
       </div>
+
     </div>
-    <p class="flow-text" id="about"> In present times of fast growing internet and its easy access to masses, internet
-      based technologies
-      are being increasingly used to solve many problems of business,education and industries.
-      Use of these internet based technologies has become necessary for any business or enterprise to succeed.
-    </p>
-    <h5> Who we are</h5>
-    <hr>
-    <p class="flow-text">We are involved in the business of application of internet based technologies in
-      business,education
-      and industries. </p>
-    <h5> What we do</h5>
-    <hr>
-    <p class="flow-text">We are involved in following activities.
-    <ul style="font-size: large;">
-      <li>Web-development</li>
-      <li>Mobile development</li>
-      <li> Digital Marketing</li>
-    </ul>
-    </p>
-
-    <h5> Why choose us</h5>
-    <hr>
-    <p class="flow-text"> We offer world class products and services at the most economical rate and believe
-      that benefits of this digital revolution must reach everybody. </p>
-
-    <h5 id="products"> Our Products and Customers</h5>
-    <hr>
-    <div style="display: flex;  align-items: center; ">
-      <img src="paperlogo.png" height="35px" width="35px" alt="logo"> <span style="font-size: 25px; margin-top: 0;">
-        PaperCalc </span>
-    </div>
-    <div style="position: relative; left: 60%; bottom: 40;"> <a href='https://play.google.com/store/apps/details?id=papercalc&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-      <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="45px" width="100px"/></a> </div>
-
-    <div style="display: flex;  align-items: center; ">
-      <img src="calcall.png" height="35px" width="35px" alt="logo"> <span style="font-size: 25px; margin-top: 0;">
-        CalcAll </span>
-    </div>
-    <div style="position: relative; left: 60%; bottom: 40;"> <a href='https://play.google.com/store/apps/details?id=calcall&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-      <img alt='Get it on Google Play' 
-      src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="45px" width="100px"/>
-    </a> </div>
-    <div style="font-size: large;margin-top: 10px;"> Shribalaji Agro Products www.shribalajiagroproducts.com
-    </div>
-    <div style="font-size: large;margin-top: 10px;"> Manushree Chemicals www.manushreechemicals.in</div>
-    <div id="contacts">
-      <h5> Contact us</h5>
-      <hr>
-      <p class="flow-text"> Please feel free to contact us regarding
-        any query. </p>
-    </div>
-    <div class='valign-wrapper flow-text'> <i class="material-icons">phone</i> <span> 7520671785 </span> </div>
-
-    <div class="valign-wrapper flow-text"><i class="material-icons">email</i> <span class="contact">
-        realtechsolns@gmail.com </span><br /> </div>
-    <div class="valign-wrapper flow-text"><i class="material-icons">location_city</i><span class="contact"> Vishal Vihar
-        Saharanpur U.P 247001</span> </div>
-    <hr>
-
-    <form action="https://formspree.io/f/mqkgwlll" method="POST">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Enter Name" id="name" type="text" class="validate" name="name">
-          <label class="active" for="name"> Name</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Enter Email" id="email" type="text" class="validate" name="Email">
-          <label class="active" for="name"> Email</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Enter contact number" id="phone" type="text" class="validate" name="Phone">
-          <label class="active" for="phone"> Contact Number</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s6">
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <label class="active" for="name"> Write something...</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <button class="btn" type="submit"> Send</button>
-          <label class="active" for="phone"></label>
-        </div>
-      </div>
 
 
-    </form>
+
 
 
   </div>
-  <div class="footer" style="background: #ee6e73;padding: 5px; display: flex;align-items: center;">
-    <i class="material-icons small" style="font-size: 17px;">
-      copyright</i> <span> 2021 Realtech Solutions </span>
+
+
+  
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light flow-text">Please feel free to contact us regarding any query.</p>
+          <div class='valign-wrapper flow-text' style="margin-bottom: 7px;"> <i class="material-icons">phone</i> <span> 7520671785 </span> </div>
+
+          <div class="valign-wrapper flow-text" style="margin-bottom: 7px;"><i class="material-icons">email</i> <span class="contact">
+              realtechsolns@gmail.com </span><br /> </div>
+          <div class="valign-wrapper flow-text" style="margin-bottom: 7px;"><i class="material-icons">location_city</i><span class="contact"> Vishal Vihar
+              Saharanpur U.P 247001 India</span> </div>
+          <hr>
+      
+          <form action="https://formspree.io/f/mqkgwlll" method="POST">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Enter Name" id="name" type="text" class="validate" name="name">
+                <label class="active" for="name"> Name</label>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Enter Email" id="email" type="text" class="validate" name="Email">
+                <label class="active" for="name"> Email</label>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Enter contact number" id="phone" type="text" class="validate" name="Phone">
+                <label class="active" for="phone"> Contact Number</label>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="input-field col s6">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label class="active" for="name"> Write something...</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <button class="btn" type="submit"> Send</button>
+                <label class="active" for="phone"></label>
+              </div>
+            </div>
+      
+      
+          </form>
+      
+      
+        
+
+
+
+
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <script>
-    function toggle() {
-      document.getElementById("menu").classList.toggle("menu")
 
-    }
-  </script>
-  <script> function hide() { document.getElementById("mobile-demo").style.display = "none" }
-    function show() { document.getElementById("menu").style.display = "block" }</script>
+  
+    <div class="footer-copyright blue">
+      <div class="container valign-wrapper  ">
+        <i class="material-icons small" style="font-size: 17px;">
+          copyright</i> <span> 2021 Realtech Solutions </span>
+      
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
 </body>
 
 </html>
