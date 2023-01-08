@@ -89,7 +89,7 @@ var collection = document.querySelectorAll("[contenteditable]");
 
 for (var node of collection) {
 console.log(localStorage.getItem(node.id)== "")
-/
+
 if( localStorage.getItem(node.id)!="")
 {node.innerHTML = localStorage.getItem(node.id)}
 
