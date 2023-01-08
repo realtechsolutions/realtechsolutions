@@ -1,58 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-    function item (name) { return localStorage.getItem(name)}
-    
-      google.charts.load('current', {packages:["orgchart"]});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
-        data.addColumn('string', 'Manager');
-        data.addColumn('string', 'ToolTip');
-
-        // For each orgchart box, provide the name, manager, and tooltip to show.
-      // const n1 = localStorage.getItem("n1")
-       // const n2 = localStorage.getItem("n2")
-       //console.log(item("n1"))
-       
-        data.addRows([
-          ["Some","some1","Some2"],
-          
-        [item('n1'), 'Mgr3', 'Chairman'],
-       /*  [item("n2"), item("n1"), 'Executive Director and CEO'],
-          [item('n3'), item("m3"), ''],
-          [item('n4'), item("m4"), ''],
-          [item('n5'), item("m5"), ''],
-           [item('n6'), item("m6"), ''],
-          [item('n7'), item("m7"), ''],
-          [item('n8'), item("m8"), ''],
-          [item('n9'), item("m9"), ''],
-          [item('n9'), item("m9"), ''],
-          [item('n10'), item("m10"), ''],
-          [item('n11'), item("m11"), ''],
-          [item('n12'), item("m12"), ''],
-          [item('n13'), item("m13"), ''],
-          [item('n14'), item("m14"), ''],
-          [item('n15'), item("m15"), ''],
-          [item('n16'), item("m16"), ''],
-          [item('n17'), item("m17"), ''],
-          [item('n18'), item("m18"), ''],
-          [item('n19'), item("m19"), ''],
-          [item('n20'), item("m20"), ''] */
-          
-          
-        ]);
-
-        // Create the chart.
-        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-        // Draw the chart, setting the allowHtml option to true for the tooltips.
-        chart.draw(data, {'allowHtml':true});
-      }
-   </script>
+   
     </head>
   <body>
     <div id="chart_div"></div>
@@ -65,7 +14,7 @@
 <p id = "p">  Organisation chart   </p>
 
 
-<table> 
+<table id= "chartdata" style = "display:none"  > 
 
 <tr>
 <th> Name </th> <th> Designation </th> <th> Manager </th>
@@ -132,7 +81,7 @@
 
 <button type="button" onclick = "setLocalStorage()" >Save!</button>
  
-
+<button type="button" onclick = "setVisibility ()" >Edit</button>
 
 
 <script>
@@ -140,9 +89,7 @@ var collection = document.querySelectorAll("[contenteditable]");
 
 for (var node of collection) {
 console.log(localStorage.getItem(node.id)== "")
-//console.log(localStorage.getItem(node.id)== null)
-//console.log(localStorage.getItem(node.id)== undefined)
-
+/
 if( localStorage.getItem(node.id)!="")
 {node.innerHTML = localStorage.getItem(node.id)}
 
@@ -151,10 +98,73 @@ if( localStorage.getItem(node.id)!="")
 function setLocalStorage() {
 for (var node of collection) {
 localStorage.setItem(node.id,node.innerHTML)
+document.getElementById("chartdata").style.display = "none"
 }
 } 
 
+function setVisibility () {document.getElementById("chartdata").style.display = "block"
+console.log("fum works")
+
+}
+
 </script>
+
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    function item (name) { return localStorage.getItem(name)}
+    
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+      // const n1 = localStorage.getItem("n1")
+       // const n2 = localStorage.getItem("n2")
+       //console.log(item("n1"))
+       
+        data.addRows([
+          [item('n1'), '', 'Chairman'],
+         /* [item("n2"), item("n1"), 'Executive Director and CEO'],
+          [item('n3'), item("m3"), ''],
+          [item('n4'), item("m4"), ''],
+          [item('n5'), item("m5"), ''],
+           [item('n6'), item("m6"), ''],
+          [item('n7'), item("m7"), ''],
+          [item('n8'), item("m8"), ''],
+          [item('n9'), item("m9"), ''],
+          [item('n9'), item("m9"), ''],
+          [item('n10'), item("m10"), ''],
+          [item('n11'), item("m11"), ''],
+          [item('n12'), item("m12"), ''],
+          [item('n13'), item("m13"), ''],
+          [item('n14'), item("m14"), ''],
+          [item('n15'), item("m15"), ''],
+          [item('n16'), item("m16"), ''],
+          [item('n17'), item("m17"), ''],
+          [item('n18'), item("m18"), ''],
+          [item('n19'), item("m19"), ''],
+          [item('n20'), item("m20"), ''] */
+          
+          
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+   </script>
+
+
+
+
+
   
 </body>
 </html>
