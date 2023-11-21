@@ -236,7 +236,7 @@
     <div class="footer-copyright blue">
       <div class="container valign-wrapper  ">
         <i class="material-icons small" style="font-size: 17px;">
-          copyright</i> <span> 2021 Realtech Solutions </span>
+          copyright</i> <span id = "currentYear"> 2021 </span> Realtech Solutions 
       
       </div>
     </div>
@@ -247,6 +247,14 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script> 
+  
+  function updateYear() {
+  var year = new Date().getFullYear();
+  document.getElementById("currentYear").innerHTML = year;
+}
+
+  document.addEventListener("DOMContentLoaded", updateYear)    </script>
 
 </body>
 
