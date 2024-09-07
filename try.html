@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web development, Mobile development, Digital Marketing">
+
+  <title>Realtech Solutions</title>
+
+  <!-- Picocss CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+
+  <!-- Material Icons CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    /* Custom hero styles */
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero {
+        height: 50vh;
+      }
+    }
+
+    /* Additional section styling */
+    .icon-block {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .contact .icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .icon i {
+      margin-right: 10px;
+    }
+
+    /* Styling for Google Play Badge */
+    .google-play-badge img {
+      width: 135px;
+      height: 40px;
+    }
+
+    /* Mobile menu toggle */
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+      }
+
+      .menu-toggle.active + ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <span class="menu-toggle material-icons">menu</span>
+    <ul>
+      <li><strong>Realtech Solutions</strong></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#product">Products and Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Digital Solutions for Business, Education, and Industries</h1>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <article>
+      <h2>About Us</h2>
+      <p>
+        In the fast-growing internet era, technologies are essential for businesses, education, and industries to succeed. We provide digital solutions to solve everyday problems.
+      </p>
+    </article>
+
+    <div class="grid">
+      <div class="icon-block">
+        <h3><i class="material-icons">flash_on</i> Speeds up development</h3>
+        <p>We help businesses rapidly grow by implementing cutting-edge technologies.</p>
+      </div>
+
+      <div class="icon-block">
+        <h3><i class="material-icons">group</i> Who we are</h3>
+        <p>We specialize in applying internet-based technologies across different sectors.</p>
+      </div>
+
+      <div class="icon-block">
+        <h3><i class="material-icons">settings</i> What we do</h3>
+        <p>We create beautiful and functional applications for business, education, and industries, including web development, mobile development, and digital marketing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="product" class="container">
+    <h2>Our Products and Customers</h2>
+    <ul>
+      <li>
+        <strong>PaperCalc</strong>
+        <a href="https://play.google.com/store/apps/details?id=com.realtechsolns.papercalc" class="google-play-badge">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Badge">
+        </a>
+      </li>
+
+      <li>
+        <strong>CalcAll</strong>
+        <a href="https://play.google.com/store/apps/details?id=com.realtechsolns.calcall" class="google-play-badge">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Badge">
+        </a>
+      </li>
+
+      <li><a href="http://shribalajiagroproducts.com">Shri Balaji Agro Products</a></li>
+      <li><a href="http://manushreechemicals.in">Manushree Chemicals</a></li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <div class="icon">
+        <i class="material-icons">phone</i> <span>7520671785</span>
+      </div>
+      <div class="icon">
+        <i class="material-icons">email</i> <span>realtechsolns@gmail.com</span>
+      </div>
+      <div class="icon">
+        <i class="material-icons">location_city</i> <span>Vishal Vihar, Saharanpur U.P 247001</span>
+      </div>
+    </div>
+
+    <form action="https://formspree.io/f/mqkgwlll" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write something..."></textarea>
+
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Realtech Solutions. All rights reserved.</p>
+  </footer>
+
+  <!-- Script for Menu Toggle -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    toggleButton.addEventListener('click', function () {
+      this.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+
+</html>
