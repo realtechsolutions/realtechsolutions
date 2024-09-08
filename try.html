@@ -5,119 +5,277 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Web development, Mobile development, Digital Marketing">
-
   <title>Realtech Solutions</title>
 
   <!-- Picocss CDN -->
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-
   <!-- Material Icons CDN -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
-    /* Custom hero styles */
-    .hero {
-      background: url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
+    /* General styling */
+    body {
+      font-family: 'Arial', sans-serif;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    }
-
-    @media only screen and (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero {
-        height: 50vh;
-      }
-    }
-
-    /* Additional section styling */
-    .icon-block {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .contact .icon {
+    /* Header and Navigation */
+    header {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      justify-content: space-between;
+      padding: 10px 0;
     }
 
-    .icon i {
-      margin-right: 10px;
+    /* Container for logo and title */
+    .logo-title {
+      display: flex;
+      align-items: center;
     }
 
-    /* Styling for Google Play Badge */
-    .google-play-badge img {
-      width: 135px;
-      height: 40px;
+    .logo-title img {
+      width: 50px;
+      max-width: 100%;
+      height: auto;
+      margin-right: 15px;
     }
 
-    /* Mobile menu toggle */
-    .menu-toggle {
-      display: none;
+    .logo-title h1 {
+      margin: 0;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 768px) {
-      nav ul {
-        display: none;
+      .logo-title img {
+        width: 30px;
+        margin-right: 10px;
       }
 
+      .logo-title h1 {
+        font-size: 1.2rem;
+      }
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .menu-toggle {
+      font-size: 32px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    /* Hide the menu toggle icon on larger screens */
+    @media (min-width: 769px) {
       .menu-toggle {
-        display: block;
-        cursor: pointer;
+        display: none;
+      }
+    }
+
+    /* Show the navigation menu in a row on larger screens */
+    @media (min-width: 769px) {
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        background: white;
         padding: 10px;
-        font-size: 24px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        width: 200px;
+      }
+
+      nav ul.active {
+        display: block;
       }
 
       .menu-toggle.active + ul {
-        display: flex;
+        display: block;
+      }
+
+      .menu-toggle.active + ul {
+        left: 10px;
+      }
+    }
+
+    /* Hero section with inline image */
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      color: #555;
+    }
+
+    /* About Section styling */
+    .grid {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2rem;
+    }
+
+    .icon-block {
+      text-align: center;
+      margin: 20px;
+      max-width: 30%;
+    }
+
+    .icon-block h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .icon-block p {
+      font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .grid {
         flex-direction: column;
-        align-items: flex-start;
+      }
+
+      .icon-block {
+        max-width: 100%;
+      }
+    }
+
+    /* Contact section */
+    .contact .icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .contact .icon i {
+      margin-right: 10px;
+      font-size: 1.5rem; /* Adjust icon size if needed */
+    }
+
+    .contact .icon p {
+      margin: 0; /* Remove default margin */
+      line-height: 1.5; /* Ensure text and icon are vertically aligned */
+    }
+
+    .contact form {
+      margin-top: 1rem;
+    }
+
+    .contact form .input-field {
+      margin-bottom: 1rem;
+    }
+
+    .contact .input-field input,
+    .contact .input-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 0.5rem 0;
+      background-color: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    /* Products Section Styling */
+    #product {
+      padding: 2rem 1rem;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product-item {
+      flex: 1 1 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      text-align: center;
+    }
+
+    .product-item img.google-play-badge {
+      width: 100%;
+      max-width: 120px; /* Adjusted for better responsiveness */
+      height: auto;
+    }
+
+    .product-item img.dummy-logo {
+      width: 100px;
+      height: auto;
+      max-width: 100%;
+      margin-bottom: 0.5rem; /* Added margin for spacing */
+    }
+
+    .product-item strong {
+      display: block;
+      margin: 0.5rem 0; /* Added margin for spacing */
+    }
+
+    @media (max-width: 768px) {
+      .product-item img.google-play-badge {
+        max-width: 100px; /* Further reduced size on smaller screens */
       }
     }
   </style>
-
-  <link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body>
+<body class="container">
 
-  <!-- Navigation -->
-  <nav>
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <img src="logo.realtech.png" alt="Company Logo">
+      <h1>Realtech Solutions</h1>
+    </div>
     <span class="menu-toggle material-icons">menu</span>
-    <ul>
-      <li><strong>Realtech Solutions</strong></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#product">Products and Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">Products and Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-  <header class="hero">
-    <h1>Digital Solutions for Business, Education, and Industries</h1>
-  </header>
+  <section class="hero">
+    <img src="hero.svg" alt="Hero Image">
+    <h1>Realtech Solutions</h1>
+    <h2>Digital Solutions for Business, Education, and Industries</h2>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="container">
-    <article>
-      <h2>About Us</h2>
-      <p>
-        In the fast-growing internet era, technologies are essential for businesses, education, and industries to succeed. We provide digital solutions to solve everyday problems.
-      </p>
-    </article>
+    <h2>About Us</h2>
+    <p>In the fast-growing internet era, technologies are essential for businesses, education, and industries to succeed. We provide digital solutions to solve everyday problems.</p>
 
     <div class="grid">
       <div class="icon-block">
@@ -140,24 +298,31 @@
   <!-- Products Section -->
   <section id="product" class="container">
     <h2>Our Products and Customers</h2>
-    <ul>
-      <li>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="dummy-papercalc-logo.png" alt="PaperCalc Logo" class="dummy-logo">
         <strong>PaperCalc</strong>
         <a href="https://play.google.com/store/apps/details?id=com.realtechsolns.papercalc" class="google-play-badge">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Badge">
         </a>
-      </li>
+      </div>
 
-      <li>
+      <div class="product-item">
+        <img src="dummy-calcall-logo.png" alt="CalcAll Logo" class="dummy-logo">
         <strong>CalcAll</strong>
         <a href="https://play.google.com/store/apps/details?id=com.realtechsolns.calcall" class="google-play-badge">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Badge">
         </a>
-      </li>
+      </div>
 
-      <li><a href="http://shribalajiagroproducts.com">Shri Balaji Agro Products</a></li>
-      <li><a href="http://manushreechemicals.in">Manushree Chemicals</a></li>
-    </ul>
+      <div class="product-item">
+        <a href="http://shribalajiagroproducts.com">Shri Balaji Agro Products</a>
+      </div>
+
+      <div class="product-item">
+        <a href="http://manushreechemicals.in">Manushree Chemicals</a>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
@@ -165,46 +330,58 @@
     <h2>Contact Us</h2>
     <div class="contact">
       <div class="icon">
-        <i class="material-icons">phone</i> <span>7520671785</span>
+        <i class="material-icons">phone</i>
+        <p>7520671785</p>
       </div>
       <div class="icon">
-        <i class="material-icons">email</i> <span>realtechsolns@gmail.com</span>
+        <i class="material-icons">email</i>
+        <p>realtechsolns@gmail.com</p>
       </div>
       <div class="icon">
-        <i class="material-icons">location_city</i> <span>Vishal Vihar, Saharanpur U.P 247001</span>
+        <i class="material-icons">location_on</i>
+        <p>Vishal Vihar, Saharanpur U.P. 247001 </p>
       </div>
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/mqkgwlll" method="POST">
+        <div class="input-field">
+          <input placeholder="Enter Name" id="name" type="text" class="validate" name="name" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="Enter Email" id="email" type="email" class="validate" name="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="Enter Contact Number" id="phone" type="text" class="validate" name="phone">
+          <label for="phone">Contact Number</label>
+        </div>
+        <div class="input-field">
+          <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button class="btn" type="submit">Send</button>
+      </form>
     </div>
-
-    <form action="https://formspree.io/f/mqkgwlll" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter Name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write something..."></textarea>
-
-      <button type="submit" class="btn">Send</button>
-    </form>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Realtech Solutions. All rights reserved.</p>
-  </footer>
+  <!-- Footer -->
+<footer>
+  <p>&copy; <span id="current-year"></span> Realtech Solutions. All rights reserved.</p>
+</footer>
 
-  <!-- Script for Menu Toggle -->
+<script>
+  // JavaScript to set the current year in the footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
   <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-
-    toggleButton.addEventListener('click', function () {
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
       this.classList.toggle('active');
-      navMenu.classList.toggle('active');
+      document.querySelector('nav ul').classList.toggle('active');
     });
   </script>
-
 </body>
 
 </html>
