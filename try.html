@@ -209,16 +209,17 @@
     }
 
     .product-grid {
-      display: flex;
+      display: block;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
 
     .product-item {
-      flex: 1 1 calc(100% - 20px);
-      max-width: calc(100% - 20px);
-      text-align: center;
+      display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap size as needed */
+    margin-bottom: 20px; 
     }
 
     .product-item img.google-play-badge {
@@ -240,14 +241,15 @@
     }
 
     @media (max-width: 768px) {
-      .product-item img.google-play-badge {
-        max-width: 50px; /* Further reduced size on smaller screens */
-
-.product-item img.dummy-logo {
-      width: 100px;}
-
-        
+      .product-item a.google-play-badge img {
+        max-width: 100px; /* Further reduced size on smaller screens */
+        height: auto;        
       }
+
+      .product-item img.dummy-logo {
+        max-width: 30px; /* Adjust the size as needed */
+        height: auto;
+    }
     }
   </style>
 </head>
@@ -284,7 +286,7 @@
     <div class="grid">
       <div class="icon-block">
         <h3><i class="material-icons">flash_on</i> Speeds up development</h3>
-        <p>We help businesses rapidly grow by implementing cutting-edge technologies.</p>
+        <h4>We help businesses rapidly grow by implementing cutting-edge technologies.</h4>
       </div>
 
       <div class="icon-block">
@@ -302,6 +304,8 @@
   <!-- Products Section -->
   <section id="product" class="container">
     <h2>Our Products and Customers</h2>
+    
+    
     <div class="product-grid">
       <div class="product-item">
         <img src="paperlogo.png" alt="PaperCalc Logo" class="dummy-logo">
@@ -310,7 +314,7 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Badge">
         </a>
       </div>
-
+<hr/>
       <div class="product-item">
         <img src="calcall.png" alt="CalcAll Logo" class="dummy-logo">
         <strong>CalcAll</strong>
@@ -318,14 +322,17 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Badge">
         </a>
       </div>
+      <hr/>
 
       <div class="product-item">
         <a href="http://shribalajiagroproducts.com">Shri Balaji Agro Products</a>
       </div>
+      <hr/>
 
       <div class="product-item">
         <a href="http://manushreechemicals.in">Manushree Chemicals</a>
       </div>
+      <hr/>
     </div>
   </section>
 
