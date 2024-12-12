@@ -57,9 +57,9 @@
     <section id="about" class="relative">
         <div class="bg-blue-50 py-20 text-center">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-6 text-blue-700">
+                <h3 class="text-2xl font-bold mb-6 text-blue-700">
                     Digital Solutions for Business, Education, and Industries
-                </h2>
+                </h3>
                 <p class="max-w-2xl mx-auto text-lg mb-12">
                     In the fast-growing internet era, technologies are essential for 
                     businesses, education, and industries to succeed. We provide digital 
@@ -107,7 +107,8 @@
                         alt="PaperCalc Logo" 
                         class="mx-auto mb-4 rounded-lg"
                     >
-                    <h3 class="text-xl font-semibold mb-4">PaperCalc</h3>
+                    <h3 class="text-xl font-semibold mb-1">PaperCalc</h3>
+                    <h4 class="text-base font-normal mb-4">App.for paper industry professionals.</h4>
                     <a 
                         href="https://play.google.com/store/apps/details?id=com.realtechsolns.papercalc" 
                         target="_blank" 
@@ -125,6 +126,7 @@
                         class="mx-auto mb-4 rounded-lg"
                     >
                     <h3 class="text-xl font-semibold mb-4">CalcAll</h3>
+                    <h4 class="text-base font-normal mb-4">All in one calculator.</h4>
                     <a 
                         href="https://play.google.com/store/apps/details?id=com.realtechsolns.calcall" 
                         target="_blank" 
@@ -144,11 +146,13 @@
                         class="mx-auto mb-4 rounded-lg"
                     >
                     <h3 class="text-xl font-semibold mb-4">Audit Assist</h3>
+                    <h4 class="text-base font-normal mb-4">App.for conducting qc audits with mobile.</h4>
                     <a 
                         href="https://play.google.com/store/apps/details?id=in.realtechsolns.auditassist" 
                         target="_blank" 
                         class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
-                    >
+                   
+                        >
                         Google Play
                     </a>
                 </div>
@@ -159,8 +163,9 @@
                         class="mx-auto mb-4 rounded-lg"
                     >
                     <h3 class="text-xl font-semibold mb-4">ISO-9001</h3>
+                    <h4 class="text-base font-normal mb-4">App.for understanding ISO-9001 quality standard.</h4>
                     <a 
-                        href="https://play.google.com/store/apps/details?id=com.realtechsolns.papercalc" 
+                        href="https://play.google.com/store/apps/details?id=in.realtechsolns.iso_9001" 
                         target="_blank" 
                         class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
                     >
@@ -174,8 +179,9 @@
                         class="mx-auto mb-4 rounded-lg"
                     >
                     <h3 class="text-xl font-semibold mb-4">Papertrack </h3>
+                    <h4 class="text-base font-normal mb-4">windows app for document management with auto version control and advanced search.</h4>
                     <a 
-                        href="Papertrack.msix" 
+                        href="https://drive.google.com/file/d/1gY8kAdEeZIonwQN1zjTUDap39AaTlZD7/view?usp=sharing" 
                         target="_blank" 
                         class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
                     >
@@ -229,30 +235,34 @@
                     </div>
                 </div>
                 
-                <form id="contact-form" class="space-y-4">
+                <form id="contact-form" class="space-y-4" action="https://formspree.io/f/mqkgwlll" method="POST">
                     <input 
                         type="text" 
                         placeholder="Name" 
                         required
                         class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
+                       name = "Name"
+                        >
                     <input 
                         type="email" 
                         placeholder="Email" 
                         required
                         class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
+                   name = "Email"
+                        >
                     <input 
                         type="tel" 
                         placeholder="Contact Number" 
                         required
                         class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
+                   name=""Phone No.
+                        >
                     <textarea 
                         placeholder="Message" 
                         required
                         class="w-full p-3 border rounded h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    ></textarea>
+                   name = "Message"
+                        ></textarea>
                     <button 
                         type="submit" 
                         class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition"
@@ -284,12 +294,15 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // Basic Form Submission (you'd replace this with actual backend handling)
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
+        // const contactForm = document.getElementById('contact-form');
+        // contactForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     alert('Thank you for your message! We will get back to you soon.');
+        //     contactForm.reset();
+        // });
     </script>
+
+
+
 </body>
 </html>
